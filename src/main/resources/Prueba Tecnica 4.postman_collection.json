@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "e3613950-3665-4fde-8d43-cd84adfaa605",
+		"name": "Prueba Tecnica 4",
+		"description": "CRUD e historias de usuario para la prueba técnica 4.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32180269"
+	},
+	"item": [
+		{
+			"name": "Client CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/clients/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"51237812X\",\r\n    \"name\": \"Cristiano\",\r\n    \"lastName\": \"Ronaldo\",\r\n    \"email\": \"cr7@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/clients/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/clients/11223344X",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/11223344X",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"11223344X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/clients/edit/11223344X",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"11223344X\",\r\n    \"name\": \"Xavi\",\r\n    \"lastName\": \"Hernandez\",\r\n    \"email\": \"xh8@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/edit/11223344X",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"edit",
+								"11223344X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/clients/delete/11223344X",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/delete/11223344X",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"delete",
+								"11223344X"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/agency/flights/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"MADU-1188\",\r\n  \"origin\": \"Madrid\",\r\n  \"destination\": \"Dublin\",\r\n  \"seatType\": \"Business\",\r\n  \"pricePerSeat\": 440.00,\r\n  \"totalSeats\": 50,\r\n  \"departureDate\": \"2024-04-10\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flights/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/PASA-7755",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/PASA-7755",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"PASA-7755"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/edit/MADU-1188",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"MADU-1188\",\r\n    \"origin\": \"Madrid\",\r\n    \"destination\": \"Dublin\",\r\n    \"seatType\": \"Business\",\r\n    \"pricePerSeat\": 540.0,\r\n    \"totalSeats\": 50,\r\n    \"departureDate\": \"2024-04-10\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flights/edit/MADU-1188",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"edit",
+								"MADU-1188"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/delete/MADU-1188",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/delete/MADU-1188",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"delete",
+								"MADU-1188"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights?dateFrom=01/02/2024&dateTo=28/04/2024&origin=Madrid&destination=Barcelona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights?dateFrom=01/02/2024&dateTo=28/04/2024&origin=Madrid&destination=Barcelona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "01/02/2024"
+								},
+								{
+									"key": "dateTo",
+									"value": "28/04/2024"
+								},
+								{
+									"key": "origin",
+									"value": "Madrid"
+								},
+								{
+									"key": "destination",
+									"value": "Barcelona"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight Booking CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/agency/flight-booking/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flight\": {\r\n    \"code\": \"MABA-1133\"\r\n  },\r\n  \"clients\": [\r\n    {\r\n      \"dni\": \"11223344X\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flight-booking/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flight-booking/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flight-booking/delete/8",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/delete/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotels/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"AR 0002\",\r\n  \"name\": \"Atlantis Resort\",\r\n  \"city\": \"Miami\",\r\n  \"rooms\": [\r\n    {\r\n      \"type\": \"Doble\",\r\n      \"pricePerNight\": 300.0\r\n    },\r\n    {\r\n      \"type\": \"Triple\",\r\n      \"pricePerNight\": 350.0\r\n    }\r\n  ]\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels?city=Barcelona&dateFrom=2024-03-08&dateTo=2024-06-10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels?city=Barcelona&dateFrom=2024-03-08&dateTo=2024-06-10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Barcelona"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2024-03-08"
+								},
+								{
+									"key": "dateTo",
+									"value": "2024-06-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/AR0002",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/AR0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"AR0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/edit/AR0002",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"AR0002\",\r\n    \"name\": \"Atlantis Resort\",\r\n    \"city\": \"Vigo\",\r\n    \"rooms\": [\r\n        {\r\n            \"type\": \"Doble\",\r\n            \"pricePerNight\": 300.0\r\n        },\r\n        {\r\n            \"type\": \"Triple\",\r\n            \"pricePerNight\": 350.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/edit/AR0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"edit",
+								"AR0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/delete/AR0005",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"AR0002\",\r\n    \"name\": \"Atlantis Resort\",\r\n    \"city\": \"Miami\",\r\n    \"rooms\": [\r\n        {\r\n            \"type\": \"Doble\",\r\n            \"pricePerNight\": 300.0\r\n        },\r\n        {\r\n            \"type\": \"Triple\",\r\n            \"pricePerNight\": 350.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/delete/AR0005",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"delete",
+								"AR0005"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotels/AR0002/rooms/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Single\",\r\n    \"pricePerNight\": 220.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/AR0002/rooms/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"AR0002",
+								"rooms",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/HL0002/rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/HL0002/rooms",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"HL0002",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/SH0005/rooms/17",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/SH0005/rooms/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"SH0005",
+								"rooms",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/SH0005/rooms/delete/17",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Doble\",\r\n    \"pricePerNight\": 220.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/SH0005/rooms/delete/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"SH0005",
+								"rooms",
+								"delete",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/SH0005/rooms/edit/17",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": 12,\r\n    \"type\": \"Doble\",\r\n    \"pricePerNight\": 160.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/SH0005/rooms/edit/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"SH0005",
+								"rooms",
+								"edit",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room Booking CRUD",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotel-booking/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateFrom\": \"2024-04-01\",\r\n  \"dateTo\": \"2024-04-07\",\r\n  \"room\": {\r\n    \"code\": 3\r\n  },\r\n  \"clients\": [\r\n    {\r\n      \"dni\": \"33445566C\"\t\r\n\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/edit/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateFrom\": \"2024-03-25\",\r\n    \"dateTo\": \"2024-03-30\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
